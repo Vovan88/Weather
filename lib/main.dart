@@ -147,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
               bottom: 20,
               child: IconButton(
                   onPressed: () {
-                    if (currentTown!.isNotEmpty) {
+                    if (currentTown != null && currentTown!.isNotEmpty) {
                       MainBloc().getData(currentTown!);
                     }
                   },
