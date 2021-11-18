@@ -115,6 +115,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       if (snapshotData.hasData) {
                         DataWheather dataWheather = snapshotData.data!;
                         int temperature = (dataWheather.temp - 273.15).round();
+                        String plus = "";
+
+                        if (temperature > 0) {
+                          plus = "+";
+                        }
+
                         return Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -125,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   color: Colors.green, fontSize: 30),
                             ),
                             Text(
-                              (dataWheather.temp - 273.15).round().toString(),
+                              plus + temperature.toString(),
                               style: TextStyle(
                                   color: temperature > 0
                                       ? Colors.red
