@@ -4,7 +4,7 @@ import 'package:weather/data.dart';
 class ResultPage extends StatefulWidget {
   final DataWheather dataWheather;
   final String title;
-  const ResultPage({Key? key, required this.title, required this.dataWheather}) : super(key: key);
+  const ResultPage({Key? key, required this.title, required this.dataWasssssssssssssssssssssssssheather}) : super(key: key);
  
 
   
