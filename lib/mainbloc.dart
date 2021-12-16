@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:http/http.dart' as http;
 import 'package:weather/constants.dart';
-import 'package:weather/data.dart';
+import 'package:weather/data/data.dart';
 
 class MainBloc {
   static StreamController<DataWheather> streamController =
@@ -24,6 +24,7 @@ class MainBloc {
         streamController.sink.add(dataWheather);
       }
     } on SocketException catch (_) {
+      streamController.sink.addError("No internet");
       return null;
     }
   }
