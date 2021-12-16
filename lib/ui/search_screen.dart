@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather/data/data.dart';
 
-import 'package:weather/mainbloc.dart';
+import 'package:weather/bloc/mainbloc.dart';
 import 'package:weather/ui/result_screen.dart';
 
 class MyHomePage extends StatefulWidget {
