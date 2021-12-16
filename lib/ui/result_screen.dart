@@ -24,8 +24,16 @@ class ResultPage extends StatelessWidget {
           title: Text(title),
         ),
         body: Stack(
-          children: [
-            Container(),
+          children: const [
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Center(
+                child: Text(
+                  "Ошибка получения данных",
+                  style: TextStyle(color: Colors.red, fontSize: 20),
+                ),
+              ),
+            ),
           ],
         ),
       );
@@ -51,6 +59,10 @@ class ResultPage extends StatelessWidget {
                   style: TextStyle(
                       color: temperature > 0 ? Colors.red : Colors.blue,
                       fontSize: 60),
+                ),
+                Text(
+                  "ветер: " + dataWheather!.speedWind.toString() + " m/s",
+                  style: const TextStyle(color: Colors.black, fontSize: 20),
                 ),
               ],
             ),

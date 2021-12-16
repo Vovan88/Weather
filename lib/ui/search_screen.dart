@@ -21,7 +21,6 @@ class MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    DataWheather? dataWheather;
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -78,7 +77,7 @@ class MyHomePageState extends State<MyHomePage> {
 
                     case ConnectionState.active:
                       if (snapshotData.hasData) {
-                        dataWheather = snapshotData.data!;
+                        DataWheather dataWheather = snapshotData.data!;
 
                         WidgetsBinding.instance!.addPostFrameCallback((_) {
                           Navigator.push(
@@ -97,7 +96,7 @@ class MyHomePageState extends State<MyHomePage> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => ResultPage(
-                                      dataWheather: dataWheather,
+                                      dataWheather: null,
                                       title: textController.text,
                                     )),
                           );
